@@ -74,7 +74,12 @@
         <h4>
             <?php
                 echo $ClasseXXX[$i]['Nome']  . ' ' . $ClasseXXX[$i]['Cognome'] . ' | ' ;
-                print_r(($ClasseXXX[$i]['voti']));
+                echo "Voti: ";
+                foreach(($ClasseXXX[$i]['voti']) as $voti) {
+                    echo $voti . " ";
+                }
+                echo ' | ' ;
+
                 $media = array_sum ($ClasseXXX[$i]['voti']) / count ($ClasseXXX[$i]['voti'] );
                 echo "Average vote: "; 
                 echo number_format($media,2);
@@ -89,7 +94,7 @@
 
     <p>
         <?php
-        var_dump($ClasseXXX);
+            var_dump($ClasseXXX);
         ?>
     </p>
 
