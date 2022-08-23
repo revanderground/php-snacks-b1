@@ -62,7 +62,7 @@
             [
                 'Nome'=> 'Leonardo',
                 'Cognome'=> 'Di Caprio',
-                'voti' => array(10,9,10,6,2,2,9),
+                'voti' => [10,9,10,6,2,2,9],
     
             ],
 
@@ -73,8 +73,11 @@
     <?php for ($i=0; $i <count($ClasseXXX); $i++ ) { ?>
         <h4>
             <?php
-                echo $ClasseXXX[$i]['Nome']  . ' ' . $ClasseXXX[$i]['Cognome'] . ' | ' .  $ClasseXXX[$i][$voti] ;
-                $media = array_sum ($voti) / count ($voti);
+                echo $ClasseXXX[$i]['Nome']  . ' ' . $ClasseXXX[$i]['Cognome'] . ' | ' ;
+                
+               
+                 
+                $media = array_sum ($ClasseXXX[$i]['voti']) / count ($ClasseXXX[$i]['voti'] );
                 echo "$media";
             
             ?>
