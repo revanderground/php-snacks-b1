@@ -78,7 +78,7 @@
                
                  
                 $media = array_sum ($ClasseXXX[$i]['voti']) / count ($ClasseXXX[$i]['voti'] );
-                echo "$media";
+                echo number_format($media,2);
             
             ?>
 
